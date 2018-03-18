@@ -487,7 +487,7 @@ class Region {
 
     onDrag(delta) {
         const maxEnd = this.wavesurfer.getDuration();
-        if (this.end + delta > maxEnd || this.start + delta < 0) {
+        if (delta > 0 && this.end + delta > maxEnd || this.start + delta < 0) {
             return;
         }
 
