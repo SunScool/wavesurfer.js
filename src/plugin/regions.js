@@ -184,7 +184,7 @@ class Region {
             this.start = 0;
             this.end = this.end - this.start;
         }
-        if (this.end > dur) {
+        if (this.end > dur && this.start < dur) {
             this.end = dur;
             this.start = dur - (this.end - this.start);
         }
